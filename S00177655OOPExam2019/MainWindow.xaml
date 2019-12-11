@@ -7,15 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox HorizontalAlignment="Left" Height="241" Margin="66,94,0,0" VerticalAlignment="Top" Width="195" SelectionChanged="ListBox_SelectionChanged"/>
-        <ListBox HorizontalAlignment="Left" Height="241" Margin="524,94,0,0" VerticalAlignment="Top" Width="195"/>
-        <Button Content="Add&gt;&gt;" HorizontalAlignment="Left" Height="22" Margin="355,143,0,0" VerticalAlignment="Top" Width="92"/>
-        <Button Content="&lt;&lt;Remove" HorizontalAlignment="Left" Height="22" Margin="355,228,0,0" VerticalAlignment="Top" Width="92"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox HorizontalAlignment="Left" Height="241" Margin="95,94,0,0" VerticalAlignment="Top" Width="195" Grid.Column="1"/>
+        <Button x:Name="btnAdd" Content="Add&gt;&gt;" HorizontalAlignment="Left" Height="22" Margin="355,143,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnRemove" Content="&lt;&lt;Remove" HorizontalAlignment="Left" Height="22" Margin="355,228,0,0" VerticalAlignment="Top" Width="92" Click="Btnn_Click" Grid.ColumnSpan="2"/>
         <TextBox HorizontalAlignment="Left" Height="17" Margin="66,29,0,0" TextWrapping="Wrap" Text="Formation" VerticalAlignment="Top" Width="67"/>
         <TextBox HorizontalAlignment="Left" Height="19" Margin="66,70,0,0" TextWrapping="Wrap" Text="All Players" VerticalAlignment="Top" Width="67"/>
-        <TextBox HorizontalAlignment="Left" Height="19" Margin="524,70,0,0" TextWrapping="Wrap" Text="Selected Players" VerticalAlignment="Top" Width="93"/>
-        <ComboBox HorizontalAlignment="Left" Height="17" Margin="156,29,0,0" VerticalAlignment="Top" Width="105"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="552,386,0,0" TextWrapping="Wrap" Text="Spaces " VerticalAlignment="Top" Width="65"/>
+        <TextBox HorizontalAlignment="Left" Height="19" Margin="95,70,0,0" TextWrapping="Wrap" Text="Selected Players" VerticalAlignment="Top" Width="93" Grid.Column="1"/>
+        <ComboBox x:Name="CmbxFormations" HorizontalAlignment="Left" Height="17" Margin="156,29,0,0" VerticalAlignment="Top" Width="105" SelectionChanged="CmbxFormations_SelectionChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="123,386,0,0" TextWrapping="Wrap" Text="Spaces " VerticalAlignment="Top" Width="65" Grid.Column="1"/>
+        <ListBox x:Name="lbxAllPlayers" HorizontalAlignment="Left" Height="241" Margin="66,94,0,0" VerticalAlignment="Top" Width="195" SelectionChanged="LbxAllPlayers_SelectionChanged"/>
 
     </Grid>
 </Window>
