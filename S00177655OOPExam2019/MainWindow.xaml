@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox HorizontalAlignment="Left" Height="241" Margin="66,94,0,0" VerticalAlignment="Top" Width="195"/>
+        <ListBox HorizontalAlignment="Left" Height="241" Margin="66,94,0,0" VerticalAlignment="Top" Width="195" SelectionChanged="ListBox_SelectionChanged"/>
         <ListBox HorizontalAlignment="Left" Height="241" Margin="524,94,0,0" VerticalAlignment="Top" Width="195"/>
         <Button Content="Add&gt;&gt;" HorizontalAlignment="Left" Height="22" Margin="355,143,0,0" VerticalAlignment="Top" Width="92"/>
         <Button Content="&lt;&lt;Remove" HorizontalAlignment="Left" Height="22" Margin="355,228,0,0" VerticalAlignment="Top" Width="92"/>

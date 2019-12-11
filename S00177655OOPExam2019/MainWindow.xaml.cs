@@ -24,5 +24,10 @@ namespace S00177655OOPExam2019
         {
             InitializeComponent();
         }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
